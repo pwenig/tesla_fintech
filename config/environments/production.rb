@@ -24,7 +24,7 @@ Rails.application.configure do
     :domain         => ENV['MAILGUN_DOMAIN'],
     :authentication => :plain
   }
-  
+  ActionMailer::Base.delivery_method = :smtp
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
